@@ -22,7 +22,7 @@ namespace VehicleApi.Service
         public Task StartAsync(CancellationToken stoppingToken)
         {
             timer = new Timer(UpdateVehicleStatuses, null, TimeSpan.Zero,
-            TimeSpan.FromSeconds(10));
+            TimeSpan.FromSeconds(60));
 
             return Task.CompletedTask;
         }

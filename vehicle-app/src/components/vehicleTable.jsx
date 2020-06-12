@@ -93,7 +93,7 @@ class VehicleTable extends Component {
 
   handleAutoUpdateChange(event) {
     if (event.target.checked) {
-      let intervalId = setInterval(() => this.getData(), 20000);
+      let intervalId = setInterval(() => this.getData(), 60000);
       this.setState({ interval: intervalId });
     } else {
       clearInterval(this.state.interval);
